@@ -29,6 +29,6 @@ public class LanguageList {
     }
 
     public boolean isExciting() {
-        throw new UnsupportedOperationException("Please implement the isExciting() method");
+        return languages.contains("Java") || languages.contains("Kotlin");
     }
 }
