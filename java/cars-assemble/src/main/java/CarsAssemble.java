@@ -1,7 +1,7 @@
 public class CarsAssemble {
+    int CAR_PRODUCED_PER_HOUR = 221;
 
     public double productionRatePerHour(int speed) {
-        int CAR_PRODUCED_PER_HOUR = 221;
         return CAR_PRODUCED_PER_HOUR * speed * successRate(speed);
     }
 
@@ -9,6 +9,7 @@ public class CarsAssemble {
     public int workingItemsPerMinute(int speed) {
         return (int) (productionRatePerHour(speed) / 60);
     }
+
     private static double successRate(int speed) {
         if (speed >= 1 && speed < 5) {
             return 1.;
