@@ -2,7 +2,7 @@ import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class ElonsToyCarTest {
+public class    ElonsToyCarTest {
     @Test
     public void buy_new_car_returns_instance() {
         ElonsToyCar car = ElonsToyCar.buy();
