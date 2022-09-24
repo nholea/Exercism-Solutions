@@ -1,5 +1,11 @@
 class NeedForSpeed {
-    // TODO: define the constructor for the 'NeedForSpeed' class
+    private int speed;
+    private int batteryDrain;
+
+    public NeedForSpeed(int speed, int batteryDrain) {
+        this.speed = speed;
+        this.batteryDrain = batteryDrain;
+    }
 
     public boolean batteryDrained() {
         throw new UnsupportedOperationException("Please implement the NeedForSpeed.batteryDrained() method");
