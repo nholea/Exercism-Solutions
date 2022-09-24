@@ -2,6 +2,8 @@ class NeedForSpeed {
     private int speed;
     private int batteryDrain;
 
+    private int distanceDriven = 0;
+
     public NeedForSpeed(int speed, int batteryDrain) {
         this.speed = speed;
         this.batteryDrain = batteryDrain;
@@ -12,11 +14,11 @@ class NeedForSpeed {
     }
 
     public int distanceDriven() {
-        throw new UnsupportedOperationException("Please implement the NeedForSpeed.distanceDriven() method");
+        return distanceDriven;
     }
 
     public void drive() {
-        throw new UnsupportedOperationException("Please implement the NeedForSpeed.drive() method");
+        distanceDriven += speed;
     }
 
     public static NeedForSpeed nitro() {
