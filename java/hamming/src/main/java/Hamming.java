@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 public class Hamming {
     private final String leftStrand;
@@ -22,13 +23,5 @@ public class Hamming {
     }
 
     public int getHammingDistance() {
-        int counter = 0;
-
-        for (int index = 0; index < rightStrand.length(); index++) {
-            if (rightStrand.charAt(index) != leftStrand.charAt(index)) {
-                counter++;
-            }
-        }
-        return counter;
-    }
+        return (int) IntStream.range(0,rightStrand.length()).filter(index -> leftStrand.charAt(index) != rightStrand.charAt(index)).count();}
 }
