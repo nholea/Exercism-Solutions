@@ -1,39 +1,63 @@
+import java.util.Random;
+
 class DnDCharacter {
+    private Random random;
+    private final int strength;
+    private final int dexterity;
+    private final int constitution;
+    private final int intelligence;
+    private final int wisdom;
+    private final int charisma;
+
+    public DnDCharacter(){
+        this.strength =ability();
+        this.dexterity =ability();
+        this.constitution =ability();
+        this.intelligence =ability();
+        this.wisdom =ability();
+        this.charisma =ability();
+    }
 
     int ability() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        Random random = new Random();
+        return random.ints(4, 1, 7)
+                .sorted()
+                .skip(1)
+                .sum();
     }
 
     int modifier(int input) {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        return Math.floorDiv(input-10,2);
     }
 
     int getStrength() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+       return strength;
     }
 
     int getDexterity() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        return dexterity;
     }
 
     int getConstitution() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        return constitution;
     }
 
     int getIntelligence() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        return intelligence;
     }
 
     int getWisdom() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        return wisdom;
     }
 
     int getCharisma() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        return charisma;
     }
 
     int getHitpoints() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        int INITIAL_HITPOINTS = 10;
+
+        return INITIAL_HITPOINTS + modifier(constitution);
     }
 
 }
